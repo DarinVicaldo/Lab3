@@ -13,24 +13,33 @@ Description : Learning CSS.
     <title>CSS Advanced Demonstrations</title>
     <style>
         #margin-demo {
+            margin: 30px;
+            border: 2px solid #ccc;
+
             /*Modify #margin-demo to have a margin of 30px and a solid black border of 2px. Also, the borders must fit the content.*/
         }
 
         .padding-demo {
+            padding: 30px;
+            border: 2px dashed red
+            
             /*Adjust .padding-demo to include 30px padding and a dashed red border of 2px.*/
         }
 
         .container .nested-opacity {
+            opacity: 0.2;
             /*Change the opacity of .nested-opacity to 0.2!*/
         }
 
         
         .inline-demo {
+            display: inline;    
             /*Change the display to see all elements of this type in a line.*/
             margin: 15px;
         }
 
         .block-demo {
+            text-align: center;
             /*Ensure .block-demo centers its text.*/
         }
 
@@ -40,7 +49,8 @@ Description : Learning CSS.
         Here, you might need to look at the technique we used for the first and second children.
         */
 
-        .block-demo > .inline-demo:first-child {            
+        .block-demo > .inline-demo:first-child {   
+            float: left;
             /*
             Add CSS that I stick the first child to the left side of the screen.
             */
@@ -48,19 +58,27 @@ Description : Learning CSS.
             
         }
 
-        .block-demo > .inline-demo:nth-child(2) {            
+        .block-demo > .inline-demo:nth-child(2) {    
+            float: center;        
             color: blue;
         }
 
         /* Add your css for the thrid child here. */
+        .block-demo > .inline-demo:nth-child(3){
+            float: right;
+            color: green;
+        }
 
         .image-demo {
             /* Modify the .image-demo class to adjust the image's width to 50% of the screen. */
+            width: 50%;
             border: 2px solid blue;
         }
 
         .hover-demo:hover {
             /*Create a hover effect for .hover-demo that changes its color to blue and cursor to grabbing.*/
+            color: blue;
+            cursor: grabbing;
         }
     </style>
 </head>
@@ -86,7 +104,7 @@ Description : Learning CSS.
 
     <h2>CSS Image Styling with Inline CSS</h2>
     <!-- Add a dotted green border of 3px inline. Which style will win the competition? -->
-    <img class="image-demo" style="" src="images/example.svg" alt="Demo Image">
+    <img class="image-demo" style="border:3px green dotted" src="images/example.svg" alt="Demo Image">
 
     <h2>CSS Hover Effects</h2>
     <div class="hover-demo"><span>Hover over me! My color will change to blue!</span></div>
